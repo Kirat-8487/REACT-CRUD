@@ -17,7 +17,12 @@ const Product = () => {
     }
   }, []);
 
-
+  useEffect(() => {
+    if (product.length > 0) {
+      localStorage.setItem("product", JSON.stringify(product));
+    }
+  }, [product]);
+  
   const handleSubmit = (e) => {
     e.preventDefault();
     const newProduct = { name, description, price, about, image };
