@@ -1,0 +1,87 @@
+@import './styles/variables';
+@import './styles/mixins';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: $font-family-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: $bg-light;
+    color: $text-dark;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    background: rgba(255, 107, 53, 0.1);
+    padding: $spacing-xs $spacing-sm;
+    border-radius: $radius-sm;
+    font-size: $font-size-sm;
+}
+
+// Global heading styles
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $font-weight-bold;
+    line-height: 1.2;
+    margin-bottom: $spacing-md;
+    color: $primary-color;
+}
+
+h1 {
+    font-size: $font-size-4xl;
+}
+
+h2 {
+    font-size: $font-size-3xl;
+}
+
+h3 {
+    font-size: $font-size-2xl;
+}
+
+// Link styles
+a {
+    color: $accent-color;
+    text-decoration: none;
+    transition: color $transition-base;
+
+    &:hover {
+        color: darken($accent-color, 10%);
+    }
+}
+
+// Selection color
+::selection {
+    background: rgba(255, 107, 53, 0.2);
+    color: $text-dark;
+}
+
+// Recipe card hover effect
+.recipe-card {
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-recipe-hover;
+
+        .recipe-image {
+            transform: scale(1.05);
+        }
+    }
+}

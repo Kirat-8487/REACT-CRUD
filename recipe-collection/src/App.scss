@@ -1,0 +1,128 @@
+@import './styles/variables';
+@import './styles/mixins';
+
+// Recipe Card Styles
+.recipe-card {
+    transition: all 0.3s ease;
+    border-radius: $radius-lg;
+    overflow: hidden;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    background: $card-bg;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: $shadow-recipe-hover;
+
+        .recipe-image {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// Recipe image
+.recipe-image {
+    transition: transform 0.3s ease;
+}
+
+// Navbar Styles
+.navbar {
+    box-shadow: $shadow-md;
+    padding: $spacing-md $spacing-lg;
+
+    .nav-link {
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: $font-weight-medium;
+        transition: all $transition-base;
+        margin: 0 $spacing-sm;
+
+        &:hover {
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        &.active {
+            color: white;
+        }
+    }
+}
+
+// Form Controls
+.form-control,
+.form-select {
+    background: white;
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    color: $text-dark;
+    border-radius: $radius-md;
+    transition: all $transition-base;
+
+    &:focus {
+        background: white;
+        border-color: $primary-color;
+        box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.15);
+        color: $text-dark;
+    }
+}
+
+.form-label {
+    color: $text-dark-secondary;
+    font-weight: $font-weight-medium;
+    margin-bottom: $spacing-sm;
+}
+
+// Button Styles
+.btn {
+    transition: all $transition-base;
+    font-weight: $font-weight-semibold;
+    border-radius: $radius-md;
+    padding: $spacing-sm $spacing-lg;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &-primary {
+        background: $primary-color;
+        border-color: $primary-color;
+
+        &:hover {
+            background: darken($primary-color, 10%);
+            border-color: darken($primary-color, 10%);
+        }
+    }
+}
+
+// Card Styles
+.card {
+    border-radius: $radius-lg;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    background: $card-bg;
+    box-shadow: $shadow-sm;
+
+    .card-header {
+        background: rgba(255, 107, 53, 0.05);
+        border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+        font-weight: $font-weight-semibold;
+    }
+
+    .card-title {
+        color: $primary-color;
+        font-weight: $font-weight-bold;
+    }
+}
+
+// Badge styles
+.badge {
+    font-weight: $font-weight-semibold;
+    padding: $spacing-xs $spacing-md;
+    border-radius: $radius-md;
+}
+
+// Alert styles
+.alert {
+    border-radius: $radius-lg;
+    border: 1px solid rgba(255, 107, 53, 0.1);
+}
